@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="balance_array">
+        <item>250</item>
+        <item>7000</item>
+        <item>15000</item>
+    </string-array>
+</resources>
+
+
+
+
+
