@@ -119,7 +119,7 @@ public class BeaconReferenceApplication extends Application implements Bootstrap
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
                         .setContentTitle("ChaseWay IoT")
-                        .setContentText("An beacon is nearby.")
+                        .setContentText("A beacon is nearby.")
                         .setSmallIcon(R.drawable.ic_launcher);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);

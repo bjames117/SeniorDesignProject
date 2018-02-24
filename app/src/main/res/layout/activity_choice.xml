@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"></RelativeLayout>
 
-    <RelativeLayout
+    55<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!-- Hello Text -->
@@ -78,8 +78,8 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:layout_alignBottom="@+id/transaction_button"
-            android:layout_alignStart="@+id/branch_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/transaction_button"
             android:background="@drawable/choice_buttons_tablet"
             android:onClick="onVestibuleClicked"
             android:text="Unlock Vestibule"
@@ -94,8 +94,9 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_above="@+id/log_out"
-            android:layout_alignStart="@+id/log_out"
-            android:layout_marginBottom="31dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/imageView4"
             android:background="@drawable/choice_buttons_tablet"
             android:onClick="onTransactionClicked"
             android:text="ATM Transaction"
@@ -103,15 +104,15 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- Emergency button -->
+
         <!-- Request Service -->
         <Button
             android:id="@+id/branch_button"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/transaction_button"
-            android:layout_marginStart="147dp"
+            android:layout_alignBottom="@+id/log_out"
             android:background="@drawable/choice_buttons_tablet"
             android:onClick="onBranchClicked"
             android:text="Place in Queue"
@@ -126,9 +127,8 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="26dp"
-            android:layout_marginStart="47dp"
-            android:layout_toEndOf="@+id/branch_button"
+            android:layout_alignStart="@+id/transaction_button"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/choice_buttons_tablet"
             android:onClick="onLogoutClicked"
             android:text="Log Out"
@@ -140,9 +140,9 @@
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/hampton_university_seal"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hampton_university_seal" />
 
     </RelativeLayout>
 

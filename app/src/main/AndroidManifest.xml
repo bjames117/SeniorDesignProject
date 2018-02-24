@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <!--
          The following two permissions are not required to use
          Google Maps Android API v2, but are recommended.
@@ -43,6 +44,13 @@
             android:label="@string/app_name" />
         <activity android:name=".choiceActivity" />
         <activity android:name=".TransactionActivity" />
+        <activity android:name=".FingerprintActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -59,6 +67,14 @@
             android:name=".LocalBranchActivity"
             android:label="@string/title_activity_local_branch"
             android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".SecurityActivity"
+            android:label="@string/title_activity_security"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".securitycontentActivity"
+            android:label="@string/title_activity_securitycontent"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
