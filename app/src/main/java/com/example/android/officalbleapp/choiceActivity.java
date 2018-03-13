@@ -123,7 +123,7 @@ public class choiceActivity extends Activity implements BeaconConsumer {
 
         b.putSerializable("Customer",customer);
         i.putExtras(b);
-        i.setClass(this,TransactionActivity.class);
+        i.setClass(this,SecurityHomeActivity.class);
 
         i.putExtra("Customer",customer);
         startActivity(i);
