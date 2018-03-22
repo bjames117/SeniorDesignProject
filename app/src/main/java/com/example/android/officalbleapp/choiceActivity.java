@@ -36,7 +36,7 @@ import java.util.Map;
 public class choiceActivity extends Activity implements BeaconConsumer {
     private Customer customer;
     // TODO: 8/1/17 CHANGE TO THE MINOR VALUE OF THE BEACON YOU WANT TO USE.
-    private static int BEACON_NUMBER = 3;
+    private static int BEACON_NUMBER = 2;
 
     RequestQueue queue;
     private boolean hasNeverBeenInQueue = true;
@@ -123,7 +123,7 @@ public class choiceActivity extends Activity implements BeaconConsumer {
 
         b.putSerializable("Customer",customer);
         i.putExtras(b);
-        i.setClass(this,SecurityHomeActivity.class);
+        i.setClass(this,FingerprintActivity.class);
 
         i.putExtra("Customer",customer);
         startActivity(i);
