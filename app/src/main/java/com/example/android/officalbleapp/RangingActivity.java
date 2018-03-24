@@ -30,8 +30,8 @@ public class RangingActivity extends Activity implements BeaconConsumer {
     protected static final String TAG = "RangingActivity";
 
     // TODO: 8/1/17 CHANGE MINOR VALUES OF BEACON TO WHAT YOU WANT TO USE
-    private static int DOOR_BEACON_NUMBER = 2;
-    private static int ATM_BEACON_NUMBER = 1;
+    private static int DOOR_BEACON_NUMBER = 1;
+    private static int ATM_BEACON_NUMBER = 2;
 
     private boolean hasNeverSentRequest = true;
     RequestQueue queue;

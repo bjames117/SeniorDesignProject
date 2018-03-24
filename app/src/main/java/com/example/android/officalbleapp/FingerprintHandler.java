@@ -32,6 +32,12 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     //customer= mCustomer;
 
 
+    public FingerprintHandler(Context mContext, Customer mCustomer) {
+        context = mContext;
+        customer = mCustomer;
+    }
+
+
     public void startAuth(FingerprintManager manager, FingerprintManager.CryptoObject cryptoObject) {
         CancellationSignal cancellationSignal = new CancellationSignal();
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {

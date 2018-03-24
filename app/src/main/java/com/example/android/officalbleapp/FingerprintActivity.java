@@ -49,8 +49,7 @@ private Customer customer;
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_fingerprint);
-
-
+        getSerializedObject();
     // Initializing both Android Keyguard Manager and Fingerprint Manager
     KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
     FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
@@ -88,7 +87,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
                     if (cipherInit()) {
                         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
-                        FingerprintHandler helper = new FingerprintHandler(this);
+                        FingerprintHandler helper = new FingerprintHandler(this, customer);
                         helper.startAuth(fingerprintManager, cryptoObject);
                     }
                 }
@@ -156,4 +155,14 @@ public boolean cipherInit() {
         throw new RuntimeException("Failed to init Cipher", e);
     }
 }
+
+
+    private void getSerializedObject() {
+        Bundle b = this.getIntent().getExtras();
+        if (b != null)
+            customer = (Customer)b.getSerializable("Customer");
+
+    }
+
+
 }

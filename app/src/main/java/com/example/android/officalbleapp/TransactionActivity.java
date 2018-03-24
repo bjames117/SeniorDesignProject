@@ -226,7 +226,7 @@ public class TransactionActivity extends Activity implements BeaconConsumer {
     public void sendToServer(final String name, final String languages, final String amount) {
 
         // TODO: 8/1/17 CHANGE THE URL TO THE SERVER YOU WANT TO USE 
-        StringRequest sr = new StringRequest(Request.Method.POST, "http://senior-design-project-bjames117.c9users.io:8080/atm", new Response.Listener<String>() {
+        StringRequest sr = new StringRequest(Request.Method.POST, "http://beaconapp-abdallahozaifa.c9users.io:8080/transaction", new Response.Listener<String>() {
 
             @Override
                 public void onResponse(String response) {

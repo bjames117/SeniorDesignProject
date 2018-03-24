@@ -24,9 +24,11 @@ import org.altbeacon.beacon.BeaconManager;
 public class CreateCustomerActivity extends Activity  {
     protected static final String TAG = "CreateCustomerActivity";
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
+
     private String customerName;
     private String customerBalance;
     private String customerLanguage;
+
     private Spinner language_spinner;
     private Spinner balance_spinner;
     private EditText username;
@@ -140,7 +142,9 @@ public class CreateCustomerActivity extends Activity  {
             customerName = username.getText().toString();
             customerBalance = balance_spinner.getSelectedItem().toString();
             customerLanguage = language_spinner.getSelectedItem().toString();
+
             Customer customer  = new Customer(customerName,customerBalance,customerLanguage);
+
             Intent i = new Intent();
             Bundle b = new Bundle();
             b.putSerializable("Customer",customer);
